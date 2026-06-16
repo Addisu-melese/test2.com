@@ -558,6 +558,174 @@
      </pre>
 
             </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/history/gethistorybyphonenumber
+                </h2>
+
+                <p>Retrieve ticket history by phonenumber.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+        GET http://196.189.126.8:8010/api/history/gethistorybyphonenumber?phoneNumber=0948773837
+    </pre>
+
+                <h3>Response</h3>
+                <pre>
+       [
+  {
+    "id": 55,
+    "payer": "0948773837",
+    "routeSchedule": 2,
+    "issuedDate": "2025-05-13T12:02:02.46",
+    "routeDescription": "Merkato Tilku-Bahir Dar (Mota)",
+    "departureDate": "2026-05-17T02:00:00",
+    "distance": 0,
+    "travelDuration": null,
+    "driverName": null,
+    "assistantName": null,
+    "arrivalDate": "2025-05-19T02:00:00",
+    "gate": null,
+    "status": false,
+    "routeName": "Addis Ababa-Bahir Dar (Mota)",
+    "levelDesc": "Special Bus",
+    "sideNumber": 201,
+    "vehicleOperator": "FELEGE GHION TRADING P.L.C",
+    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0068716390/CompanyProfile/photo_2025-01-08_10-46-09.jpg",
+    "plate": "ET-3-A30262",
+    "viaDescription": "Mota",
+    "originTerminalName": "Merkato Tilku",
+    "destinationTerminalName": "Bahir Dar",
+    "destCityName": "Bahir Dar",
+    "passengerIdNumber": "",
+    "passengerNationalId": "",
+    "passengerFullName": "Amanuel Tito G/Giorgise",
+    "pickupLocationName": null,
+    "seatLayoutName": "4",
+    "subTotal": 0,
+    "discount": 0,
+    "additionalCharge": 0,
+    "grandTotal": 1
+  },
+  {
+    "id": 54,
+    "payer": "0948773837",
+    "routeSchedule": 2,
+    "issuedDate": "2025-05-12T11:12:39.257",
+    "routeDescription": "Merkato Tilku-Bahir Dar (Mota)",
+    "departureDate": "2026-05-17T02:00:00",
+    "distance": 0,
+    "travelDuration": null,
+    "driverName": null,
+    "assistantName": null,
+    "arrivalDate": "2025-05-19T02:00:00",
+    "gate": null,
+    "status": false,
+    "routeName": "Addis Ababa-Bahir Dar (Mota)",
+    "levelDesc": "Special Bus",
+    "sideNumber": 201,
+    "vehicleOperator": "FELEGE GHION TRADING P.L.C",
+    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0068716390/CompanyProfile/photo_2025-01-08_10-46-09.jpg",
+    "plate": "ET-3-A30262",
+    "viaDescription": "Mota",
+    "originTerminalName": "Merkato Tilku",
+    "destinationTerminalName": "Bahir Dar",
+    "destCityName": "Bahir Dar",
+    "passengerIdNumber": "",
+    "passengerNationalId": "",
+    "passengerFullName": "Amanuel Tito G/Giorgise",
+    "pickupLocationName": null,
+    "seatLayoutName": "3",
+    "subTotal": 0,
+    "discount": 0,
+    "additionalCharge": 0,
+    "grandTotal": 1
+  }
+]
+     </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/history/gethistorybyid
+                </h2>
+
+                <p>Retrieve ticket history by id.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+        GET http://196.189.126.8:8010/api/history/gethistorybyid?id=76
+    </pre>
+
+                <h3>Response</h3>
+                <pre>
+           {
+      "id": 76,
+      "payer": "0918775048",
+      "routeSchedule": 2,
+      "issuedDate": "2026-03-30T16:24:13.28",
+      "routeDescription": "Merkato Tilku-Bahir Dar (Mota)",
+      "departureDate": "2026-05-17T02:00:00",
+      "distance": 0,
+      "travelDuration": null,
+      "driverName": null,
+      "assistantName": null,
+      "arrivalDate": "2025-05-19T02:00:00",
+      "gate": null,
+      "status": false,
+      "routeName": "Addis Ababa-Bahir Dar (Mota)",
+      "levelDesc": "Special Bus",
+      "sideNumber": 201,
+      "vehicleOperator": "FELEGE GHION TRADING P.L.C",
+      "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0068716390/CompanyProfile/photo_2025-01-08_10-46-09.jpg",
+      "plate": "ET-3-A30262",
+      "viaDescription": "Mota",
+      "originTerminalName": "Merkato Tilku",
+      "destinationTerminalName": "Bahir Dar",
+      "destCityName": "Bahir Dar",
+      "passengerIdNumber": "",
+      "passengerNationalId": "",
+      "passengerFullName": "Fasil M  Fasil M",
+      "pickupLocationName": "Lam Beret",
+      "seatLayoutName": "8",
+      "subTotal": 0,
+      "discount": 0,
+      "additionalCharge": 0,
+      "grandTotal": 1
+    }
+     </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/tickets/redeem
+                </h2>
+
+                <p>Checking ticket</p>
+
+                <h3>Request</h3>
+
+                <pre>
+        GET http://196.189.126.8:8010/api/tickets/redeem?id=76
+    </pre>
+
+                <h3>Response</h3>
+                <pre>
+           true
+     </pre>
+
+            </div>
 
             <!-- Error Codes -->
             <div class="section">
