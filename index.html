@@ -1,63 +1,282 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>First JVS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#f5f7fa;
+        }
+
+        .container{
+            display:flex;
+        }
+
+        .sidebar{
+            width:280px;
+            height:100vh;
+            background:#1e293b;
+            color:white;
+            position:fixed;
+            overflow-y:auto;
+        }
+
+        .sidebar h2{
+            padding:20px;
+            border-bottom:1px solid #334155;
+        }
+
+        .sidebar ul{
+            list-style:none;
+            padding:0;
+        }
+
+        .sidebar li{
+            padding:12px 20px;
+            cursor:pointer;
+        }
+
+        .sidebar li:hover{
+            background:#334155;
+        }
+
+        .content{
+            margin-left:280px;
+            padding:30px;
+            width:100%;
+        }
+
+        .section{
+            background:white;
+            padding:25px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 2px 5px rgba(0,0,0,.1);
+        }
+
+        .method{
+            display:inline-block;
+            padding:5px 12px;
+            border-radius:5px;
+            color:white;
+            font-weight:bold;
+        }
+
+        .get{ background:#10b981; }
+        .post{ background:#3b82f6; }
+        .put{ background:#f59e0b; }
+        .delete{ background:#ef4444; }
+
+        pre{
+            background:#0f172a;
+            color:#e2e8f0;
+            padding:15px;
+            overflow:auto;
+            border-radius:8px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:10px;
+        }
+
+        th{
+            background:#f1f5f9;
+        }
+    </style>
 </head>
 <body>
-    <?php include "Cak_menu.php"; ?>
-    <h2>Hello Java Script</h2>
-    <!--Changing the contents of the html with id-->
-    <button type="button" onclick="document.getElementById('Addis').innerHTML=Date()">Date</button>
-    <button type="button" onclick="document.getElementById('Addis1').innerHTML='Addisu Melese'">Name</button>
-    <button type="button" onclick="document.getElementById('Addis').innerHTML=''">Clearday</button>
-    <button type="button" onclick="document.getElementById('Addis1').innerHTML=''">Clearname</button>
-    <button onclick="document.getElementById('Addis1').style.fontSize='40px'">++</button>
-    <button onclick="document.getElementById('Addis1').style.fontSize='10px'">--</button>
-    <p id="Addis"></p>
-    <p id="Addis1"></p>
-    <!--Changing the image -->
-    <button onclick="document.getElementById('image') .src='Adame.png'">changeImage</button>
-    <button onclick="document.getElementById('image') .src='Animated.GIF'">Animate</button>
-    <button onclick="document.getElementById('image') .style.display='none'">Hidimage</button>
-    <button onclick="document.getElementById('image') .style.display='block'">showimage</button>
-    <img id="image" src="Background.JPG" style="width:10%; height:10%; display: none;" >
-    <!--Call the Java script-->
-    <script src='Java.js'></script>
-    <button onclick='myfunction()'>call_fcn_of_Js</button>
-    <p id="Addis2">Please call</p>
-    <!--Display-->
-    <button onclick="document.write('Empty')">Clear all</button>
-    <button onclick="window.alert('Alert')">Alert</button>
-    <p id="Demo"></p>
-    <p id="Demo4"></p>
-    <!--call the java scriptive-->
-    <script src='Javas.js'></script>
-    <button onclick= "Replace()"> Replace</button>
-    <h2> PHP validation</h2>
-		<p><span class="error">* Required field</span></p>
-	    <form method= "post" action= "<?php $_SERVER['PHP_SELF'] ?>">
-	        Name:<br><input type= "text" name= "Sname" >
-			<span class="error">* <?php echo $namerr;?> </span><br>
-			Age:<br><input type= "text" name= "age"  >
-			<span class="error">* <?php echo $agerr;?> </span><br>
-			E-mail:<br><input type= "email" name="Email" placeholder= "name@domain.con" >
-			<span class="error">* <?php echo $emailrr;?> </span> addis1melese@gmail.com<br>
-			Gender:<span class="error">* <?php echo $gendererr;?> </span><br>
-			<br><input type= "radio" name= "sex" value= "male"> Male
-			<input type= "radio" name= "sex" value= "femal"> Femal<br>
-		    Ass:<br><input type= "text" name= "ass" >
-			<span class="error">* <?php echo $asserr;?> </span><br>
-		    mid:<br><input type= "text" name= "mid" >
-			<span class="error">* <?php echo $miderr;?> </span><br>
-		    quiz:<br><input type= "text" name= "quiz" >
-			<span class="error">* <?php echo $quzerr;?> </span><br>
-		    final:<br><input type= "text" name= "final" >
-			<span class="error">* <?php echo $finerr;?> </span><br>
-			Comment:<br><textarea name="comment" rows="10" cols= "10"> </textarea><br>
-			<br><input type= "submit" value= "Submit">
-			<input type= "reset" value= "Clear">
-		</form>	
-    
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>API Docs</h2>
+        <ul>
+            <li>Introduction</li>
+            <li>Authentication</li>
+            <li>Base URL</li>
+            <li>Users API</li>
+            <li>Products API</li>
+            <li>Error Codes</li>
+            <li>Rate Limits</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Introduction -->
+        <div class="section">
+            <h1>API Documentation</h1>
+            <p>
+                Welcome to the API documentation. This API allows you to
+                manage users, products, and orders.
+            </p>
+        </div>
+
+        <!-- Authentication -->
+        <div class="section">
+            <h2>Authentication</h2>
+
+            <p>Use Bearer Token authentication.</p>
+
+            <pre>
+Authorization: Bearer YOUR_ACCESS_TOKEN
+<p>AgentId=44
+ApiKey=67929884d6b046d980c5a8a24231a7f1
+UserName=6ee81511f7664a00a7bdd07918f8e282</p>
+            </pre>
+        </div>
+
+        <!-- Base URL -->
+        <div class="section">
+            <h2>Base URL</h2>
+
+            <pre>http://196.189.126.8:8010
+            </pre>
+        </div>
+
+        <!-- Endpoint -->
+        <div class="section">
+
+            <h2>
+                <span class="method get">GET</span>
+                /api/operators/getalloperators
+            </h2>
+
+            <p>Retrieve all operators.</p>
+
+            <h3>Request</h3>
+
+            <pre>
+GET /api/users?page=1&pageSize=10
+            </pre>
+
+            <h3>Query Parameters</h3>
+
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>integer</td>
+                    <td>No</td>
+                    <td>Page number</td>
+                </tr>
+                <tr>
+                    <td>pageSize</td>
+                    <td>integer</td>
+                    <td>No</td>
+                    <td>Records per page</td>
+                </tr>
+            </table>
+
+            <h3>Response</h3>
+
+            <pre>
+{
+    "success": true,
+    "count": 2,
+    "data": [
+        {
+            "id": 1,
+            "name": "John Doe"
+        }
+    ]
+}
+            </pre>
+
+        </div>
+
+        <!-- POST Example -->
+        <div class="section">
+
+            <h2>
+                <span class="method post">POST</span>
+                /users
+            </h2>
+
+            <p>Create a new user.</p>
+
+            <h3>Request Body</h3>
+
+            <pre>
+{
+    "name": "John Doe",
+    "email": "john@example.com"
+}
+            </pre>
+
+            <h3>Success Response</h3>
+
+            <pre>
+{
+    "success": true,
+    "message": "User created successfully"
+}
+            </pre>
+
+        </div>
+
+        <!-- Error Codes -->
+        <div class="section">
+
+            <h2>Error Codes</h2>
+
+            <table>
+                <tr>
+                    <th>Status</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Success</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>Bad Request</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>Unauthorized</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>Not Found</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Internal Server Error</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!-- Rate Limit -->
+        <div class="section">
+            <h2>Rate Limiting</h2>
+
+            <p>
+                Maximum 1000 requests per hour per API key.
+            </p>
+        </div>
+
+    </div>
+</div>
+
 </body>
-<footer></footer>
 </html>
