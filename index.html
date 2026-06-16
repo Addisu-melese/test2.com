@@ -142,7 +142,7 @@
                 <p>Use Bearer Token authentication.</p>
 
                 <pre>Authorization: Bearer YOUR_ACCESS_TOKEN
-                    <span>
+                <span>
                         AgentId=44
                         ApiKey=67929884d6b046d980c5a8a24231a7f1
                         UserName=6ee81511f7664a00a7bdd07918f8e282
@@ -506,7 +506,58 @@
 
             </div>
 
+            <!-- Endpoint -->
+            <div class="section">
 
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/routeschedule/getschedulesbyrouteandoperator
+                </h2>
+
+                <p>Retrieve get schedules by route, operator and date.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+        GET http://196.189.126.8:8010/api/routeschedule/getschedulesbyrouteandoperator?route=20&operatorId=32&date=2026-07-10
+    </pre>
+
+                <h3>Response</h3>
+                <pre>
+        {
+              "id": 0,
+              "code": null,
+              "tradeName": null,
+              "companyName": null,
+              "tin": null,
+              "note": null,
+              "establishmentDate": null,
+              "numberOfShareHolders": null,
+              "sideNumStart": null,
+              "sideNumEnds": null,
+              "phoneNumber": null,
+              "email": null,
+              "website": null,
+              "woreda": null,
+              "houseNum": null,
+              "specificAddress": null,
+              "longitude": null,
+              "latitude": null,
+              "imgUrl": "",
+              "countryName": null,
+              "countryPoliticalName": null,
+              "cityName": null,
+              "cityAlternativeName": null,
+              "regionName": null,
+              "regionAlternativeName": null,
+              "subCityName": null,
+              "subCityAlternativeName": null,
+              "companyTypeDesc": null,
+              "serviceLevelDesc": null
+            }
+     </pre>
+
+            </div>
 
             <!-- Error Codes -->
             <div class="section">
