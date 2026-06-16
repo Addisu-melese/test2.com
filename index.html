@@ -243,33 +243,50 @@
 
                 <h2>
                     <span class="method get">GET</span>
-                    /api/routes/getallroutes
+                    /api/operators/getoperatorbycode
                 </h2>
 
-                <p>Retrieve all routes.</p>
+                <p>Retrieve operators by its id/code.</p>
 
                 <h3>Request</h3>
 
                 <pre>
-                GET http://196.189.126.8:8010/api/routes/getallroutes
+                GET http://196.189.126.8:8010/api/operators/getoperatorbycode?code=2
             </pre>
 
                 <h3>Response</h3>
                 <pre>
-                [
-                 {
-                    "originCityName": "Addis Ababa",
-                    "routes": [
-                      {
-                        "routeId": 3,
-                        "distance": 0,
-                        "originTerminalName": "Merkato Tilku",
-                        "viaName": "Mota",
-                        "destinationCityName": "Bahir Dar",
-                        "destinationTerminalName": "Bahir Dar",
-                        "routeGroupDesc": "Gojam  Route"
-                      }
-                 ]
+                {
+                      "id": 0,
+                      "code": null,
+                      "tradeName": null,
+                      "companyName": null,
+                      "tin": null,
+                      "note": null,
+                      "establishmentDate": null,
+                      "numberOfShareHolders": null,
+                      "sideNumStart": null,
+                      "sideNumEnds": null,
+                      "phoneNumber": null,
+                      "email": null,
+                      "website": null,
+                      "woreda": null,
+                      "houseNum": null,
+                      "specificAddress": null,
+                      "longitude": null,
+                      "latitude": null,
+                      "imgUrl": "",
+                      "countryName": null,
+                      "countryPoliticalName": null,
+                      "cityName": null,
+                      "cityAlternativeName": null,
+                      "regionName": null,
+                      "regionAlternativeName": null,
+                      "subCityName": null,
+                      "subCityAlternativeName": null,
+                      "companyTypeDesc": null,
+                      "serviceLevelDesc": null
+                    }
              </pre>
 
             </div>
@@ -278,29 +295,213 @@
 
                 <h2>
                     <span class="method get">GET</span>
-                    /api/operators/getalloperators
+                    /api/routeschedule/getschedulesbyroute
                 </h2>
 
-                <p>Retrieve all operators.</p>
+                <p>Retrieve schedule by route and date.</p>
 
                 <h3>Request</h3>
 
                 <pre>
-                GET /api/users?page=1&pageSize=10
+                GET http://196.189.126.8:8010/api/routeschedule/getschedulesbyroute?route=20&date=2026-07-10
             </pre>
 
                 <h3>Response</h3>
                 <pre>
-                {
-                    "success": true,
-                    "count": 2,
-                    "data": [
-                        {
-                            "id": 1,
-                            "name": "John Doe"
-                        }
-                    ]
-                }
+                [
+  {
+    "id": 44954,
+    "route": 20,
+    "level": 176,
+    "vehicle": 339,
+    "driver": null,
+    "assistant": null,
+    "departureDate": "2026-07-10T11:31:00",
+    "arrivalDate": "2026-07-13T09:31:00",
+    "tariff": 70,
+    "note": null,
+    "lastObjectState": null,
+    "isActive": true,
+    "gate": null,
+    "vehicleChangedTo": null,
+    "remark": "12",
+    "routeName": "Addis Ababa-Kemise (Debre Sina)",
+    "routeDescription": "Lambert-Kemise (Debre Sina)",
+    "code": "DES-00000002",
+    "driverName": null,
+    "assistantName": null,
+    "levelDesc": "Special Bus",
+    "lastObjectStateDesc": null,
+    "vehicleId": 339,
+    "regionCode": 231,
+    "regionCodeDesc": "ET",
+    "sideNumber": 9201,
+    "vehicleOperatorId": 32,
+    "vehicleOperator": "Buna Bus Treading ",
+    "travelDuration": null,
+    "demand": null,
+    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0073324285/CompanyProfile/IMG_20250528_123915_789.jpg",
+    "amenities": [
+      "Charger"
+    ],
+    "vehiclePlateNumber": "A10781",
+    "via": 162,
+    "viaDescription": "Debre Sina",
+    "distance": 325,
+    "originTerminal": 848,
+    "originTerminalName": "Lambert",
+    "destinationTerminal": 952,
+    "destinationTerminalName": "Kemise",
+    "destinationCity": 148,
+    "destCityName": "Kemise",
+    "noOfSeat": 51
+  },
+  {
+    "id": 44955,
+    "route": 20,
+    "level": 176,
+    "vehicle": 340,
+    "driver": null,
+    "assistant": null,
+    "departureDate": "2026-07-10T11:31:00",
+    "arrivalDate": "2026-07-13T09:31:00",
+    "tariff": 70,
+    "note": null,
+    "lastObjectState": null,
+    "isActive": true,
+    "gate": null,
+    "vehicleChangedTo": null,
+    "remark": "12",
+    "routeName": "Addis Ababa-Kemise (Debre Sina)",
+    "routeDescription": "Lambert-Kemise (Debre Sina)",
+    "code": "DES-00000002",
+    "driverName": null,
+    "assistantName": null,
+    "levelDesc": "Special Bus",
+    "lastObjectStateDesc": null,
+    "vehicleId": 340,
+    "regionCode": 231,
+    "regionCodeDesc": "ET",
+    "sideNumber": 9204,
+    "vehicleOperatorId": 32,
+    "vehicleOperator": "Buna Bus Treading ",
+    "travelDuration": null,
+    "demand": null,
+    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0073324285/CompanyProfile/IMG_20250528_123915_789.jpg",
+    "amenities": [
+      "Charger"
+    ],
+    "vehiclePlateNumber": "A10784",
+    "via": 162,
+    "viaDescription": "Debre Sina",
+    "distance": 325,
+    "originTerminal": 848,
+    "originTerminalName": "Lambert",
+    "destinationTerminal": 952,
+    "destinationTerminalName": "Kemise",
+    "destinationCity": 148,
+    "destCityName": "Kemise",
+    "noOfSeat": 51
+  },
+  {
+    "id": 45560,
+    "route": 20,
+    "level": 176,
+    "vehicle": 297,
+    "driver": null,
+    "assistant": null,
+    "departureDate": "2026-07-10T11:31:00",
+    "arrivalDate": "2026-07-13T09:31:00",
+    "tariff": 70,
+    "note": null,
+    "lastObjectState": null,
+    "isActive": true,
+    "gate": null,
+    "vehicleChangedTo": null,
+    "remark": "12",
+    "routeName": "Addis Ababa-Kemise (Debre Sina)",
+    "routeDescription": "Lambert-Kemise (Debre Sina)",
+    "code": "DES-00000002",
+    "driverName": null,
+    "assistantName": null,
+    "levelDesc": "Special Bus",
+    "lastObjectStateDesc": null,
+    "vehicleId": 297,
+    "regionCode": 231,
+    "regionCodeDesc": "ET",
+    "sideNumber": 6800,
+    "vehicleOperatorId": 31,
+    "vehicleOperator": "F.M BUS TRANSPORT",
+    "travelDuration": null,
+    "demand": null,
+    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0002409721/CompanyProfile/logoa.pdf",
+    "amenities": [
+      "Confy chair",
+      "WIFI",
+      "TV",
+      "Charger",
+      "Snack",
+      "Bottled water",
+      "Air conditioner"
+    ],
+    "vehiclePlateNumber": "A01245",
+    "via": 162,
+    "viaDescription": "Debre Sina",
+    "distance": 325,
+    "originTerminal": 848,
+    "originTerminalName": "Lambert",
+    "destinationTerminal": 952,
+    "destinationTerminalName": "Kemise",
+    "destinationCity": 148,
+    "destCityName": "Kemise",
+    "noOfSeat": 51
+  },
+  {
+    "id": 45561,
+    "route": 20,
+    "level": 176,
+    "vehicle": 298,
+    "driver": null,
+    "assistant": null,
+    "departureDate": "2026-07-10T11:31:00",
+    "arrivalDate": "2026-07-13T09:31:00",
+    "tariff": 70,
+    "note": null,
+    "lastObjectState": null,
+    "isActive": true,
+    "gate": null,
+    "vehicleChangedTo": null,
+    "remark": "12",
+    "routeName": "Addis Ababa-Kemise (Debre Sina)",
+    "routeDescription": "Lambert-Kemise (Debre Sina)",
+    "code": "DES-00000002",
+    "driverName": null,
+    "assistantName": null,
+    "levelDesc": "Special Bus",
+    "lastObjectStateDesc": null,
+    "vehicleId": 298,
+    "regionCode": 231,
+    "regionCodeDesc": "ET",
+    "sideNumber": 6801,
+    "vehicleOperatorId": 31,
+    "vehicleOperator": "F.M BUS TRANSPORT",
+    "travelDuration": null,
+    "demand": null,
+    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0002409721/CompanyProfile/logoa.pdf",
+    "amenities": [],
+    "vehiclePlateNumber": "A02672",
+    "via": 162,
+    "viaDescription": "Debre Sina",
+    "distance": 325,
+    "originTerminal": 848,
+    "originTerminalName": "Lambert",
+    "destinationTerminal": 952,
+    "destinationTerminalName": "Kemise",
+    "destinationCity": 148,
+    "destCityName": "Kemise",
+    "noOfSeat": 51
+  }
+]
             </pre>
 
             </div>
