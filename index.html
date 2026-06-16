@@ -142,9 +142,11 @@
                 <p>Use Bearer Token authentication.</p>
 
                 <pre>Authorization: Bearer YOUR_ACCESS_TOKEN
-                <p>AgentId=44
-            ApiKey=67929884d6b046d980c5a8a24231a7f1
-            UserName=6ee81511f7664a00a7bdd07918f8e282</p>
+                    <span>
+                        AgentId=44
+                        ApiKey=67929884d6b046d980c5a8a24231a7f1
+                        UserName=6ee81511f7664a00a7bdd07918f8e282
+                    </span>
             </pre>
             </div>
 
@@ -168,17 +170,17 @@
                 <h3>Request Body</h3>
 
                 <pre>
-{
-    "username": "6ee81511f7664a00a7bdd07918f8e282",
-}
+                {
+                    "username": "6ee81511f7664a00a7bdd07918f8e282",
+                }
             </pre>
 
                 <h3>Success Response</h3>
 
                 <pre>
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiNmVlODE1MTFmNzY2NGEwMGE3YmRkMDc5MThmOGUyODIiLCJqdGkiOiI5YTFmZjEwYi1mOTFmLTRmN2YtYTlkZi05MjIxNzMxZDBkOTgiLCJleHAiOjE3ODE2NTU3MTAsImlzcyI6Ikh1bHViZWplIiwiYXVkIjoiSHVsdWJlamUifQ.6GmGwcG2qRG5C9T-9R9IWSmD4p9J3CbMDWxTKHINbK0"
-}
+                {
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiNmVlODE1MTFmNzY2NGEwMGE3YmRkMDc5MThmOGUyODIiLCJqdGkiOiI5YTFmZjEwYi1mOTFmLTRmN2YtYTlkZi05MjIxNzMxZDBkOTgiLCJleHAiOjE3ODE2NTU3MTAsImlzcyI6Ikh1bHViZWplIiwiYXVkIjoiSHVsdWJlamUifQ.6GmGwcG2qRG5C9T-9R9IWSmD4p9J3CbMDWxTKHINbK0"
+                }
             </pre>
 
             </div>
@@ -195,21 +197,44 @@
                 <h3>Request</h3>
 
                 <pre>
-                GET /api/users?page=1&pageSize=10
+                GET  /api/operators/getalloperators
             </pre>
 
                 <h3>Response</h3>
                 <pre>
-                {
-                    "success": true,
-                    "count": 2,
-                    "data": [
-                        {
-                            "id": 1,
-                            "name": "John Doe"
-                        }
-                    ]
-                }
+               [
+                  {
+                    "id": 2,
+                    "code": "SHC-00000001",
+                    "tradeName": "YEABAY ESHET",
+                    "companyName": "YEABAY ESHET TRANSPORT SHARE COMPANY",
+                    "tin": "0090076104",
+                    "note": null,
+                    "establishmentDate": "2024-08-15T00:00:00",
+                    "numberOfShareHolders": 191,
+                    "sideNumStart": 7000,
+                    "sideNumEnds": 7299,
+                    "phoneNumber": "0911887071",
+                    "email": null,
+                    "website": null,
+                    "woreda": "08",
+                    "houseNum": "711/712",
+                    "specificAddress": "Addis Ketema main bus station",
+                    "longitude": null,
+                    "latitude": null,
+                    "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0090076104/CompanyProfile/Logo.pdf",
+                    "countryName": "Ethiopia",
+                    "countryPoliticalName": "Federal Democratic Republic of Ethiopia",
+                    "cityName": "Addis Ababa",
+                    "cityAlternativeName": "Addis Ababa City Administration",
+                    "regionName": "Addis Ababa",
+                    "regionAlternativeName": null,
+                    "subCityName": "Addis Ketema",
+                    "subCityAlternativeName": "",
+                    "companyTypeDesc": "Share company",
+                    "serviceLevelDesc": "Level 1"
+                  },
+                ]
             </pre>
 
             </div>
@@ -226,21 +251,25 @@
                 <h3>Request</h3>
 
                 <pre>
-                GET ?page=1&pageSize=10
+                GET http://196.189.126.8:8010/api/routes/getallroutes
             </pre>
 
                 <h3>Response</h3>
                 <pre>
-                {
-                    "success": true,
-                    "count": 2,
-                    "data": [
-                        {
-                            "id": 1,
-                            "name": "John Doe"
-                        }
-                    ]
-                }
+                [
+                 {
+                    "originCityName": "Addis Ababa",
+                    "routes": [
+                      {
+                        "routeId": 3,
+                        "distance": 0,
+                        "originTerminalName": "Merkato Tilku",
+                        "viaName": "Mota",
+                        "destinationCityName": "Bahir Dar",
+                        "destinationTerminalName": "Bahir Dar",
+                        "routeGroupDesc": "Gojam  Route"
+                      }
+                 ]
             </pre>
 
             </div>
