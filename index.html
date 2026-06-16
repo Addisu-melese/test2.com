@@ -6,277 +6,323 @@
     <title>API Documentation</title>
 
     <style>
-        body{
+        body {
             font-family: Arial, sans-serif;
-            margin:0;
-            background:#f5f7fa;
+            margin: 0;
+            background: #f5f7fa;
         }
 
-        .container{
-            display:flex;
+        .container {
+            display: flex;
         }
 
-        .sidebar{
-            width:280px;
-            height:100vh;
-            background:#1e293b;
-            color:white;
-            position:fixed;
-            overflow-y:auto;
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background: #1e293b;
+            color: white;
+            position: fixed;
+            overflow-y: auto;
         }
 
-        .sidebar h2{
-            padding:20px;
-            border-bottom:1px solid #334155;
+            .sidebar h2 {
+                padding: 20px;
+                border-bottom: 1px solid #334155;
+            }
+
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .sidebar li {
+                padding: 12px 20px;
+                cursor: pointer;
+            }
+
+                .sidebar li:hover {
+                    background: #334155;
+                }
+
+        .content {
+            margin-left: 280px;
+            padding: 30px;
+            width: 100%;
         }
 
-        .sidebar ul{
-            list-style:none;
-            padding:0;
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
         }
 
-        .sidebar li{
-            padding:12px 20px;
-            cursor:pointer;
+        .method {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
         }
 
-        .sidebar li:hover{
-            background:#334155;
+        .get {
+            background: #10b981;
         }
 
-        .content{
-            margin-left:280px;
-            padding:30px;
-            width:100%;
+        .post {
+            background: #3b82f6;
         }
 
-        .section{
-            background:white;
-            padding:25px;
-            margin-bottom:20px;
-            border-radius:10px;
-            box-shadow:0 2px 5px rgba(0,0,0,.1);
+        .put {
+            background: #f59e0b;
         }
 
-        .method{
-            display:inline-block;
-            padding:5px 12px;
-            border-radius:5px;
-            color:white;
-            font-weight:bold;
+        .delete {
+            background: #ef4444;
         }
 
-        .get{ background:#10b981; }
-        .post{ background:#3b82f6; }
-        .put{ background:#f59e0b; }
-        .delete{ background:#ef4444; }
-
-        pre{
-            background:#0f172a;
-            color:#e2e8f0;
-            padding:15px;
-            overflow:auto;
-            border-radius:8px;
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 15px;
+            overflow: auto;
+            border-radius: 8px;
         }
 
-        table{
-            width:100%;
-            border-collapse:collapse;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        th,td{
-            border:1px solid #ddd;
-            padding:10px;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
         }
 
-        th{
-            background:#f1f5f9;
+        th {
+            background: #f1f5f9;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>API Docs</h2>
-        <ul>
-            <li>Introduction</li>
-            <li>Authentication</li>
-            <li>Base URL</li>
-            <li>Users API</li>
-            <li>Products API</li>
-            <li>Error Codes</li>
-            <li>Rate Limits</li>
-        </ul>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>API Docs</h2>
+            <ul>
+                <li>Introduction</li>
+                <li>Authentication</li>
+                <li>Base URL</li>
+                <li>Users API</li>
+                <li>Products API</li>
+                <li>Error Codes</li>
+                <li>Rate Limits</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <!-- Introduction -->
+            <div class="section">
+                <h1>API Documentation</h1>
+                <p>
+                    Welcome to the API documentation. This API allows you to
+                    manage users, products, and orders.
+                </p>
+            </div>
+
+            <!-- Authentication -->
+            <div class="section">
+                <h2>Authentication</h2>
+
+                <p>Use Bearer Token authentication.</p>
+
+                <pre>Authorization: Bearer YOUR_ACCESS_TOKEN
+                <p>AgentId=44
+            ApiKey=67929884d6b046d980c5a8a24231a7f1
+            UserName=6ee81511f7664a00a7bdd07918f8e282</p>
+            </pre>
+            </div>
+
+            <!-- Base URL -->
+            <div class="section">
+                <h2>Base URL</h2>
+
+                <pre>http://196.189.126.8:8010
+            </pre>
+            </div>
+            <!-- POST Example -->
+            <div class="section">
+
+                <h2>
+                    <span class="method post">Post</span>
+                    /api/operators/generatetoken
+                </h2>
+
+                <p>Create a new user.</p>
+
+                <h3>Request Body</h3>
+
+                <pre>
+{
+    "username": "6ee81511f7664a00a7bdd07918f8e282",
+}
+            </pre>
+
+                <h3>Success Response</h3>
+
+                <pre>
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiNmVlODE1MTFmNzY2NGEwMGE3YmRkMDc5MThmOGUyODIiLCJqdGkiOiI5YTFmZjEwYi1mOTFmLTRmN2YtYTlkZi05MjIxNzMxZDBkOTgiLCJleHAiOjE3ODE2NTU3MTAsImlzcyI6Ikh1bHViZWplIiwiYXVkIjoiSHVsdWJlamUifQ.6GmGwcG2qRG5C9T-9R9IWSmD4p9J3CbMDWxTKHINbK0"
+}
+            </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/operators/getalloperators
+                </h2>
+
+                <p>Retrieve all operators.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+                GET /api/users?page=1&pageSize=10
+            </pre>
+
+                <h3>Response</h3>
+                <pre>
+                {
+                    "success": true,
+                    "count": 2,
+                    "data": [
+                        {
+                            "id": 1,
+                            "name": "John Doe"
+                        }
+                    ]
+                }
+            </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/routes/getallroutes
+                </h2>
+
+                <p>Retrieve all routes.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+                GET ?page=1&pageSize=10
+            </pre>
+
+                <h3>Response</h3>
+                <pre>
+                {
+                    "success": true,
+                    "count": 2,
+                    "data": [
+                        {
+                            "id": 1,
+                            "name": "John Doe"
+                        }
+                    ]
+                }
+            </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/operators/getalloperators
+                </h2>
+
+                <p>Retrieve all operators.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+                GET /api/users?page=1&pageSize=10
+            </pre>
+
+                <h3>Response</h3>
+                <pre>
+                {
+                    "success": true,
+                    "count": 2,
+                    "data": [
+                        {
+                            "id": 1,
+                            "name": "John Doe"
+                        }
+                    ]
+                }
+            </pre>
+
+            </div>
+
+
+
+            <!-- Error Codes -->
+            <div class="section">
+
+                <h2>Error Codes</h2>
+
+                <table>
+                    <tr>
+                        <th>Status</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>400</td>
+                        <td>Bad Request</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>Unauthorized</td>
+                    </tr>
+                    <tr>
+                        <td>404</td>
+                        <td>Not Found</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Internal Server Error</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <!-- Rate Limit -->
+            <div class="section">
+                <h2>Rate Limiting</h2>
+
+                <p>
+                    Maximum 1000 requests per hour per API key.
+                </p>
+            </div>
+
+        </div>
     </div>
-
-    <!-- Main Content -->
-    <div class="content">
-
-        <!-- Introduction -->
-        <div class="section">
-            <h1>API Documentation</h1>
-            <p>
-                Welcome to the API documentation. This API allows you to
-                manage users, products, and orders.
-            </p>
-        </div>
-
-        <!-- Authentication -->
-        <div class="section">
-            <h2>Authentication</h2>
-
-            <p>Use Bearer Token authentication.</p>
-
-            <pre>
-Authorization: Bearer YOUR_ACCESS_TOKEN
-<p>AgentId=44
-ApiKey=67929884d6b046d980c5a8a24231a7f1
-UserName=6ee81511f7664a00a7bdd07918f8e282</p>
-            </pre>
-        </div>
-
-        <!-- Base URL -->
-        <div class="section">
-            <h2>Base URL</h2>
-
-            <pre>http://196.189.126.8:8010
-            </pre>
-        </div>
-
-        <!-- Endpoint -->
-        <div class="section">
-
-            <h2>
-                <span class="method get">GET</span>
-                /api/operators/getalloperators
-            </h2>
-
-            <p>Retrieve all operators.</p>
-
-            <h3>Request</h3>
-
-            <pre>
-GET /api/users?page=1&pageSize=10
-            </pre>
-
-            <h3>Query Parameters</h3>
-
-            <table>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Type</th>
-                    <th>Required</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>page</td>
-                    <td>integer</td>
-                    <td>No</td>
-                    <td>Page number</td>
-                </tr>
-                <tr>
-                    <td>pageSize</td>
-                    <td>integer</td>
-                    <td>No</td>
-                    <td>Records per page</td>
-                </tr>
-            </table>
-
-            <h3>Response</h3>
-
-            <pre>
-{
-    "success": true,
-    "count": 2,
-    "data": [
-        {
-            "id": 1,
-            "name": "John Doe"
-        }
-    ]
-}
-            </pre>
-
-        </div>
-
-        <!-- POST Example -->
-        <div class="section">
-
-            <h2>
-                <span class="method post">POST</span>
-                /users
-            </h2>
-
-            <p>Create a new user.</p>
-
-            <h3>Request Body</h3>
-
-            <pre>
-{
-    "name": "John Doe",
-    "email": "john@example.com"
-}
-            </pre>
-
-            <h3>Success Response</h3>
-
-            <pre>
-{
-    "success": true,
-    "message": "User created successfully"
-}
-            </pre>
-
-        </div>
-
-        <!-- Error Codes -->
-        <div class="section">
-
-            <h2>Error Codes</h2>
-
-            <table>
-                <tr>
-                    <th>Status</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>200</td>
-                    <td>Success</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>Bad Request</td>
-                </tr>
-                <tr>
-                    <td>401</td>
-                    <td>Unauthorized</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>Not Found</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>Internal Server Error</td>
-                </tr>
-            </table>
-
-        </div>
-
-        <!-- Rate Limit -->
-        <div class="section">
-            <h2>Rate Limiting</h2>
-
-            <p>
-                Maximum 1000 requests per hour per API key.
-            </p>
-        </div>
-
-    </div>
-</div>
 
 </body>
 </html>
