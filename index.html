@@ -184,6 +184,83 @@
             </pre>
 
             </div>
+            <div class="section">
+
+                <h2>
+                    <span class="method post">Post</span>
+                    /api/tickets/savetickets
+                </h2>
+
+                <p>Create ticket.</p>
+
+                <h3>Request Body</h3>
+
+                <pre>
+                {
+  "operator": 25,
+  "agent": 44,
+  "ticketDetail": [
+    {
+      "pnr": "",
+      "idNumber": "1",
+      "nationalId": "",
+      "firstName": "Eba",
+      "middleName": null,
+      "lastName": "Alemayehu",
+      "gender": 181,
+      "maritalStatus": null,
+      "dob": null,
+      "phoneNumber": "0948778373",
+      "emergencyContact": "",
+      "email": "ddis21@gmail.com",
+      "region": null,
+      "city": null,
+      "subCity": null,
+      "woreda": "",
+      "houseNumber": "",
+      "specificAddress": "",
+      "longitude": null,
+      "latitude": null,
+      "imageUrl": "",
+      "seatLayout": 381,
+      "isAutoAssigned": false,
+      "pickupLocation": null,
+      "billToTin": "",
+      "note": "",
+      "subTotal": 2594.0,
+      "discount": 0.0,
+      "additionalCharge": 0.0,
+      "grandTotal": 2594.0
+    }
+  ],
+  "routeSchedule": 44577,
+  "routeScheduleDate": "2026-06-16T07:30:00.000Z",
+  "paymentMethod": 144,
+  "period": null,
+  "paymentProcessor": 111,
+  "payer": "0947431170",
+  "paymentRefNumber": "88583618",
+  "paymentAmount": 2594.0,
+  "maturityDate": "2026-06-15T12:58:57.735Z",
+  "paymentIssueDate": "2026-06-15T12:58:57.735Z",
+  "paymentStatus": 86,
+  "ipAddress": "192.168.1.1",
+  "platform": "Android",
+  "latitude": 9.0197733,
+  "longitude": 38.7677533,
+  "appId": 5
+}
+            </pre>
+
+                <h3>Success Response</h3>
+
+                <pre>
+                {
+                  "message": "Sorry, your telebirr balance is insufficient"
+                }
+            </pre>
+
+            </div>
             <!-- Endpoint -->
             <div class="section">
 
@@ -723,6 +800,50 @@
                 <h3>Response</h3>
                 <pre>
            true
+     </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                
+
+                <h3>Use this schedule</h3>
+                <pre>
+           [
+  "2026-07-10",
+  "2026-07-11",
+  "2026-07-12",
+  "2026-07-13",
+  "2026-07-14",
+  "2026-07-15",
+  "2026-07-16",
+  "2026-07-17",
+  "2026-07-18",
+  "2026-07-19",
+  "2026-07-20",
+  "2026-07-21",
+  "2026-07-22",
+  "2026-07-23",
+  "2026-07-24",
+  "2026-07-25",
+  "2026-07-26",
+  "2026-07-27",
+  "2026-07-28",
+  "2026-07-29",
+  "2026-07-30",
+  "2026-07-31",
+  "2026-08-01",
+  "2026-08-02",
+  "2026-08-03",
+  "2026-08-03",
+  "2026-08-04",
+  "2026-08-04",
+  "2026-08-05",
+  "2026-08-05",
+  "2026-08-06",
+  "2026-08-06"
+]
      </pre>
 
             </div>
