@@ -320,6 +320,601 @@
 
                 <h2>
                     <span class="method get">GET</span>
+                    /api/history/gethistorybyid
+                </h2>
+
+                <p>Retrieve ticket history by id.</p>
+
+                <h3>Request</h3>
+
+                <pre>
+    GET http://196.189.126.8:8010/api/history/gethistorybyid?id=76
+</pre>
+
+                <h3>Response</h3>
+                <pre>
+       {
+  "id": 76,
+  "payer": "0918775048",
+  "routeSchedule": 2,
+  "issuedDate": "2026-03-30T16:24:13.28",
+  "routeDescription": "Merkato Tilku-Bahir Dar (Mota)",
+  "departureDate": "2026-05-17T02:00:00",
+  "distance": 0,
+  "travelDuration": null,
+  "driverName": null,
+  "assistantName": null,
+  "arrivalDate": "2025-05-19T02:00:00",
+  "gate": null,
+  "status": false,
+  "routeName": "Addis Ababa-Bahir Dar (Mota)",
+  "levelDesc": "Special Bus",
+  "sideNumber": 201,
+  "vehicleOperator": "FELEGE GHION TRADING P.L.C",
+  "imgUrl": "http://196.189.126.8:8008/image?imageUrl=ftp://192.168.251.217:21/Attachment/Operator/0068716390/CompanyProfile/photo_2025-01-08_10-46-09.jpg",
+  "plate": "ET-3-A30262",
+  "viaDescription": "Mota",
+  "originTerminalName": "Merkato Tilku",
+  "destinationTerminalName": "Bahir Dar",
+  "destCityName": "Bahir Dar",
+  "passengerIdNumber": "",
+  "passengerNationalId": "",
+  "passengerFullName": "Fasil M  Fasil M",
+  "pickupLocationName": "Lam Beret",
+  "seatLayoutName": "8",
+  "subTotal": 0,
+  "discount": 0,
+  "additionalCharge": 0,
+  "grandTotal": 1
+}
+ </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/vehicles/getvehicleseatlayout
+                </h2>
+
+                <p>Retrieve ticket history by id.</p>
+
+
+                <h3>Request</h3>
+
+                <pre>
+    GET http://196.189.126.8:8010/api/vehicles/getvehicleseatlayout?id=296&routeSchedule=45230
+</pre>
+
+                <h3>Response</h3>
+                <pre>{
+  "id": 296,
+  "maxX": 5,
+  "maxY": 14,
+  "seats": [
+    {
+      "id": 3641,
+      "name": "",
+      "x": 1,
+      "y": 1,
+      "type": "driver seat"
+    },
+    {
+      "id": 3642,
+      "name": "",
+      "x": 2,
+      "y": 1,
+      "type": "aile"
+    },
+    {
+      "id": 3643,
+      "name": "",
+      "x": 3,
+      "y": 1,
+      "type": "aile"
+    },
+    {
+      "id": 3644,
+      "name": "",
+      "x": 4,
+      "y": 1,
+      "type": "aile"
+    },
+    {
+      "id": 3645,
+      "name": "1",
+      "x": 5,
+      "y": 1,
+      "type": "seat"
+    },
+    {
+      "id": 3646,
+      "name": "",
+      "x": 1,
+      "y": 2,
+      "type": "aile"
+    },
+    {
+      "id": 3647,
+      "name": "",
+      "x": 2,
+      "y": 2,
+      "type": "aile"
+    },
+    {
+      "id": 3648,
+      "name": "",
+      "x": 3,
+      "y": 2,
+      "type": "aile"
+    },
+    {
+      "id": 3649,
+      "name": "2",
+      "x": 4,
+      "y": 2,
+      "type": "seat"
+    },
+    {
+      "id": 3650,
+      "name": "3",
+      "x": 5,
+      "y": 2,
+      "type": "seat"
+    },
+    {
+      "id": 3651,
+      "name": "4",
+      "x": 1,
+      "y": 3,
+      "type": "seat"
+    },
+    {
+      "id": 3652,
+      "name": "5",
+      "x": 2,
+      "y": 3,
+      "type": "seat"
+    },
+    {
+      "id": 3653,
+      "name": "",
+      "x": 3,
+      "y": 3,
+      "type": "aile"
+    },
+    {
+      "id": 3654,
+      "name": "6",
+      "x": 4,
+      "y": 3,
+      "type": "seat"
+    },
+    {
+      "id": 3655,
+      "name": "7",
+      "x": 5,
+      "y": 3,
+      "type": "seat"
+    },
+    {
+      "id": 3656,
+      "name": "8",
+      "x": 1,
+      "y": 4,
+      "type": "seat"
+    },
+    {
+      "id": 3657,
+      "name": "9",
+      "x": 2,
+      "y": 4,
+      "type": "seat"
+    },
+    {
+      "id": 3658,
+      "name": "",
+      "x": 3,
+      "y": 4,
+      "type": "aile"
+    },
+    {
+      "id": 3659,
+      "name": "10",
+      "x": 4,
+      "y": 4,
+      "type": "seat"
+    },
+    {
+      "id": 3660,
+      "name": "11",
+      "x": 5,
+      "y": 4,
+      "type": "seat"
+    },
+    {
+      "id": 3661,
+      "name": "12",
+      "x": 1,
+      "y": 5,
+      "type": "seat"
+    },
+    {
+      "id": 3662,
+      "name": "13",
+      "x": 2,
+      "y": 5,
+      "type": "seat"
+    },
+    {
+      "id": 3663,
+      "name": "",
+      "x": 3,
+      "y": 5,
+      "type": "aile"
+    },
+    {
+      "id": 3664,
+      "name": "14",
+      "x": 4,
+      "y": 5,
+      "type": "seat"
+    },
+    {
+      "id": 3665,
+      "name": "15",
+      "x": 5,
+      "y": 5,
+      "type": "seat"
+    },
+    {
+      "id": 3666,
+      "name": "16",
+      "x": 1,
+      "y": 6,
+      "type": "seat"
+    },
+    {
+      "id": 3667,
+      "name": "17",
+      "x": 2,
+      "y": 6,
+      "type": "seat"
+    },
+    {
+      "id": 3668,
+      "name": "",
+      "x": 3,
+      "y": 6,
+      "type": "aile"
+    },
+    {
+      "id": 3669,
+      "name": "",
+      "x": 4,
+      "y": 6,
+      "type": "aile"
+    },
+    {
+      "id": 3670,
+      "name": "",
+      "x": 5,
+      "y": 6,
+      "type": "aile"
+    },
+    {
+      "id": 3671,
+      "name": "18",
+      "x": 1,
+      "y": 7,
+      "type": "seat"
+    },
+    {
+      "id": 3672,
+      "name": "19",
+      "x": 2,
+      "y": 7,
+      "type": "seat"
+    },
+    {
+      "id": 3673,
+      "name": "",
+      "x": 3,
+      "y": 7,
+      "type": "aile"
+    },
+    {
+      "id": 3674,
+      "name": "20",
+      "x": 4,
+      "y": 7,
+      "type": "seat"
+    },
+    {
+      "id": 3675,
+      "name": "21",
+      "x": 5,
+      "y": 7,
+      "type": "seat"
+    },
+    {
+      "id": 3676,
+      "name": "22",
+      "x": 1,
+      "y": 8,
+      "type": "seat"
+    },
+    {
+      "id": 3677,
+      "name": "23",
+      "x": 2,
+      "y": 8,
+      "type": "seat"
+    },
+    {
+      "id": 3678,
+      "name": "",
+      "x": 3,
+      "y": 8,
+      "type": "aile"
+    },
+    {
+      "id": 3679,
+      "name": "24",
+      "x": 4,
+      "y": 8,
+      "type": "seat"
+    },
+    {
+      "id": 3680,
+      "name": "25",
+      "x": 5,
+      "y": 8,
+      "type": "seat"
+    },
+    {
+      "id": 3681,
+      "name": "26",
+      "x": 1,
+      "y": 9,
+      "type": "seat"
+    },
+    {
+      "id": 3682,
+      "name": "27",
+      "x": 2,
+      "y": 9,
+      "type": "seat"
+    },
+    {
+      "id": 3683,
+      "name": "",
+      "x": 3,
+      "y": 9,
+      "type": "aile"
+    },
+    {
+      "id": 3684,
+      "name": "28",
+      "x": 4,
+      "y": 9,
+      "type": "seat"
+    },
+    {
+      "id": 3685,
+      "name": "29",
+      "x": 5,
+      "y": 9,
+      "type": "seat"
+    },
+    {
+      "id": 3686,
+      "name": "30",
+      "x": 1,
+      "y": 10,
+      "type": "seat"
+    },
+    {
+      "id": 3687,
+      "name": "31",
+      "x": 2,
+      "y": 10,
+      "type": "seat"
+    },
+    {
+      "id": 3688,
+      "name": "",
+      "x": 3,
+      "y": 10,
+      "type": "aile"
+    },
+    {
+      "id": 3689,
+      "name": "32",
+      "x": 4,
+      "y": 10,
+      "type": "seat"
+    },
+    {
+      "id": 3690,
+      "name": "33",
+      "x": 5,
+      "y": 10,
+      "type": "seat"
+    },
+    {
+      "id": 3691,
+      "name": "34",
+      "x": 1,
+      "y": 11,
+      "type": "seat"
+    },
+    {
+      "id": 3692,
+      "name": "35",
+      "x": 2,
+      "y": 11,
+      "type": "seat"
+    },
+    {
+      "id": 3693,
+      "name": "",
+      "x": 3,
+      "y": 11,
+      "type": "aile"
+    },
+    {
+      "id": 3694,
+      "name": "36",
+      "x": 4,
+      "y": 11,
+      "type": "seat"
+    },
+    {
+      "id": 3695,
+      "name": "37",
+      "x": 5,
+      "y": 11,
+      "type": "seat"
+    },
+    {
+      "id": 3696,
+      "name": "38",
+      "x": 1,
+      "y": 12,
+      "type": "seat"
+    },
+    {
+      "id": 3697,
+      "name": "39",
+      "x": 2,
+      "y": 12,
+      "type": "seat"
+    },
+    {
+      "id": 3698,
+      "name": "",
+      "x": 3,
+      "y": 12,
+      "type": "aile"
+    },
+    {
+      "id": 3699,
+      "name": "40",
+      "x": 4,
+      "y": 12,
+      "type": "seat"
+    },
+    {
+      "id": 3700,
+      "name": "41",
+      "x": 5,
+      "y": 12,
+      "type": "seat"
+    },
+    {
+      "id": 3701,
+      "name": "42",
+      "x": 1,
+      "y": 13,
+      "type": "seat"
+    },
+    {
+      "id": 3702,
+      "name": "43",
+      "x": 2,
+      "y": 13,
+      "type": "seat"
+    },
+    {
+      "id": 3703,
+      "name": "44",
+      "x": 3,
+      "y": 13,
+      "type": "seat"
+    },
+    {
+      "id": 3704,
+      "name": "45",
+      "x": 4,
+      "y": 13,
+      "type": "seat"
+    },
+    {
+      "id": 3705,
+      "name": "46",
+      "x": 5,
+      "y": 13,
+      "type": "seat"
+    },
+    {
+      "id": 3706,
+      "name": "47",
+      "x": 1,
+      "y": 14,
+      "type": "seat"
+    },
+    {
+      "id": 3707,
+      "name": "48",
+      "x": 2,
+      "y": 14,
+      "type": "seat"
+    },
+    {
+      "id": 3708,
+      "name": "49",
+      "x": 3,
+      "y": 14,
+      "type": "seat"
+    },
+    {
+      "id": 3709,
+      "name": "50",
+      "x": 4,
+      "y": 14,
+      "type": "seat"
+    },
+    {
+      "id": 3710,
+      "name": "51",
+      "x": 5,
+      "y": 14,
+      "type": "seat"
+    }
+  ]
+}
+ </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
+                    /api/vehicles/getseatstatus
+                </h2>
+
+                <p>get seat status which is handled by ticket</p>
+
+                <h3>Request</h3>
+
+                <pre>
+        GET http://196.189.126.8:8010/api/vehicles/getseatstatus?routeScheduleId=2
+    </pre>
+
+                <h3>Response</h3>
+                <pre>
+       true
+ </pre>
+
+            </div>
+            <!-- Endpoint -->
+            <div class="section">
+
+                <h2>
+                    <span class="method get">GET</span>
                     /api/operators/getoperatorbycode
                 </h2>
 
@@ -806,7 +1401,7 @@
             <!-- Endpoint -->
             <div class="section">
 
-                
+
 
                 <h3>Use this schedule</h3>
                 <pre>
