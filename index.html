@@ -45,7 +45,8 @@
                 }
 
         .content {
-            margin-left: 280px;
+            margin-left: 80px;
+            margin-right: 80px;
             padding: 30px;
             width: 100%;
         }
@@ -88,6 +89,8 @@
             padding: 15px;
             overflow: auto;
             border-radius: 8px;
+            max-height: 40vh;
+            overflow-y: auto;
         }
 
         table {
@@ -110,7 +113,7 @@
     <div class="container">
 
         <!-- Sidebar -->
-        <div class="sidebar">
+        <!--<div class="sidebar">
             <h2>API Docs</h2>
             <ul>
                 <li>Introduction</li>
@@ -121,8 +124,7 @@
                 <li>Error Codes</li>
                 <li>Rate Limits</li>
             </ul>
-        </div>
-
+        </div>-->
         <!-- Main Content -->
         <div class="content">
 
@@ -197,59 +199,59 @@
 
                 <pre>
                 {
-  "operator": 25,
-  "agent": 44,
-  "ticketDetail": [
-    {
-      "pnr": "",
-      "idNumber": "1",
-      "nationalId": "",
-      "firstName": "Eba",
-      "middleName": null,
-      "lastName": "Alemayehu",
-      "gender": 181,
-      "maritalStatus": null,
-      "dob": null,
-      "phoneNumber": "0948778373",
-      "emergencyContact": "",
-      "email": "ddis21@gmail.com",
-      "region": null,
-      "city": null,
-      "subCity": null,
-      "woreda": "",
-      "houseNumber": "",
-      "specificAddress": "",
-      "longitude": null,
-      "latitude": null,
-      "imageUrl": "",
-      "seatLayout": 381,
-      "isAutoAssigned": false,
-      "pickupLocation": null,
-      "billToTin": "",
-      "note": "",
-      "subTotal": 2594.0,
-      "discount": 0.0,
-      "additionalCharge": 0.0,
-      "grandTotal": 2594.0
-    }
-  ],
-  "routeSchedule": 44577,
-  "routeScheduleDate": "2026-06-16T07:30:00.000Z",
-  "paymentMethod": 144,
-  "period": null,
-  "paymentProcessor": 111,
-  "payer": "0947431170",
-  "paymentRefNumber": "88583618",
-  "paymentAmount": 2594.0,
-  "maturityDate": "2026-06-15T12:58:57.735Z",
-  "paymentIssueDate": "2026-06-15T12:58:57.735Z",
-  "paymentStatus": 86,
-  "ipAddress": "192.168.1.1",
-  "platform": "Android",
-  "latitude": 9.0197733,
-  "longitude": 38.7677533,
-  "appId": 5
-}
+                  "operator": 25,
+                  "agent": 44,
+                  "ticketDetail": [
+                    {
+                      "pnr": "",
+                      "idNumber": "1",
+                      "nationalId": "",
+                      "firstName": "Eba",
+                      "middleName": null,
+                      "lastName": "Alemayehu",
+                      "gender": 181,
+                      "maritalStatus": null,
+                      "dob": null,
+                      "phoneNumber": "0948778373",
+                      "emergencyContact": "",
+                      "email": "ddis21@gmail.com",
+                      "region": null,
+                      "city": null,
+                      "subCity": null,
+                      "woreda": "",
+                      "houseNumber": "",
+                      "specificAddress": "",
+                      "longitude": null,
+                      "latitude": null,
+                      "imageUrl": "",
+                      "seatLayout": 381,
+                      "isAutoAssigned": false,
+                      "pickupLocation": null,
+                      "billToTin": "",
+                      "note": "",
+                      "subTotal": 2594.0,
+                      "discount": 0.0,
+                      "additionalCharge": 0.0,
+                      "grandTotal": 2594.0
+                    }
+                  ],
+                  "routeSchedule": 44577,
+                  "routeScheduleDate": "2026-06-16T07:30:00.000Z",
+                  "paymentMethod": 144,
+                  "period": null,
+                  "paymentProcessor": 111,
+                  "payer": "0947431170",
+                  "paymentRefNumber": "88583618",
+                  "paymentAmount": 2594.0,
+                  "maturityDate": "2026-06-15T12:58:57.735Z",
+                  "paymentIssueDate": "2026-06-15T12:58:57.735Z",
+                  "paymentStatus": 86,
+                  "ipAddress": "192.168.1.1",
+                  "platform": "Android",
+                  "latitude": 9.0197733,
+                  "longitude": 38.7677533,
+                  "appId": 5
+                }
             </pre>
 
                 <h3>Success Response</h3>
@@ -382,515 +384,514 @@
 
 
                 <h3>Request</h3>
-
                 <pre>
     GET http://196.189.126.8:8010/api/vehicles/getvehicleseatlayout?id=296&routeSchedule=45230
 </pre>
 
                 <h3>Response</h3>
                 <pre>{
-  "id": 296,
-  "maxX": 5,
-  "maxY": 14,
-  "seats": [
-    {
-      "id": 3641,
-      "name": "",
-      "x": 1,
-      "y": 1,
-      "type": "driver seat"
-    },
-    {
-      "id": 3642,
-      "name": "",
-      "x": 2,
-      "y": 1,
-      "type": "aile"
-    },
-    {
-      "id": 3643,
-      "name": "",
-      "x": 3,
-      "y": 1,
-      "type": "aile"
-    },
-    {
-      "id": 3644,
-      "name": "",
-      "x": 4,
-      "y": 1,
-      "type": "aile"
-    },
-    {
-      "id": 3645,
-      "name": "1",
-      "x": 5,
-      "y": 1,
-      "type": "seat"
-    },
-    {
-      "id": 3646,
-      "name": "",
-      "x": 1,
-      "y": 2,
-      "type": "aile"
-    },
-    {
-      "id": 3647,
-      "name": "",
-      "x": 2,
-      "y": 2,
-      "type": "aile"
-    },
-    {
-      "id": 3648,
-      "name": "",
-      "x": 3,
-      "y": 2,
-      "type": "aile"
-    },
-    {
-      "id": 3649,
-      "name": "2",
-      "x": 4,
-      "y": 2,
-      "type": "seat"
-    },
-    {
-      "id": 3650,
-      "name": "3",
-      "x": 5,
-      "y": 2,
-      "type": "seat"
-    },
-    {
-      "id": 3651,
-      "name": "4",
-      "x": 1,
-      "y": 3,
-      "type": "seat"
-    },
-    {
-      "id": 3652,
-      "name": "5",
-      "x": 2,
-      "y": 3,
-      "type": "seat"
-    },
-    {
-      "id": 3653,
-      "name": "",
-      "x": 3,
-      "y": 3,
-      "type": "aile"
-    },
-    {
-      "id": 3654,
-      "name": "6",
-      "x": 4,
-      "y": 3,
-      "type": "seat"
-    },
-    {
-      "id": 3655,
-      "name": "7",
-      "x": 5,
-      "y": 3,
-      "type": "seat"
-    },
-    {
-      "id": 3656,
-      "name": "8",
-      "x": 1,
-      "y": 4,
-      "type": "seat"
-    },
-    {
-      "id": 3657,
-      "name": "9",
-      "x": 2,
-      "y": 4,
-      "type": "seat"
-    },
-    {
-      "id": 3658,
-      "name": "",
-      "x": 3,
-      "y": 4,
-      "type": "aile"
-    },
-    {
-      "id": 3659,
-      "name": "10",
-      "x": 4,
-      "y": 4,
-      "type": "seat"
-    },
-    {
-      "id": 3660,
-      "name": "11",
-      "x": 5,
-      "y": 4,
-      "type": "seat"
-    },
-    {
-      "id": 3661,
-      "name": "12",
-      "x": 1,
-      "y": 5,
-      "type": "seat"
-    },
-    {
-      "id": 3662,
-      "name": "13",
-      "x": 2,
-      "y": 5,
-      "type": "seat"
-    },
-    {
-      "id": 3663,
-      "name": "",
-      "x": 3,
-      "y": 5,
-      "type": "aile"
-    },
-    {
-      "id": 3664,
-      "name": "14",
-      "x": 4,
-      "y": 5,
-      "type": "seat"
-    },
-    {
-      "id": 3665,
-      "name": "15",
-      "x": 5,
-      "y": 5,
-      "type": "seat"
-    },
-    {
-      "id": 3666,
-      "name": "16",
-      "x": 1,
-      "y": 6,
-      "type": "seat"
-    },
-    {
-      "id": 3667,
-      "name": "17",
-      "x": 2,
-      "y": 6,
-      "type": "seat"
-    },
-    {
-      "id": 3668,
-      "name": "",
-      "x": 3,
-      "y": 6,
-      "type": "aile"
-    },
-    {
-      "id": 3669,
-      "name": "",
-      "x": 4,
-      "y": 6,
-      "type": "aile"
-    },
-    {
-      "id": 3670,
-      "name": "",
-      "x": 5,
-      "y": 6,
-      "type": "aile"
-    },
-    {
-      "id": 3671,
-      "name": "18",
-      "x": 1,
-      "y": 7,
-      "type": "seat"
-    },
-    {
-      "id": 3672,
-      "name": "19",
-      "x": 2,
-      "y": 7,
-      "type": "seat"
-    },
-    {
-      "id": 3673,
-      "name": "",
-      "x": 3,
-      "y": 7,
-      "type": "aile"
-    },
-    {
-      "id": 3674,
-      "name": "20",
-      "x": 4,
-      "y": 7,
-      "type": "seat"
-    },
-    {
-      "id": 3675,
-      "name": "21",
-      "x": 5,
-      "y": 7,
-      "type": "seat"
-    },
-    {
-      "id": 3676,
-      "name": "22",
-      "x": 1,
-      "y": 8,
-      "type": "seat"
-    },
-    {
-      "id": 3677,
-      "name": "23",
-      "x": 2,
-      "y": 8,
-      "type": "seat"
-    },
-    {
-      "id": 3678,
-      "name": "",
-      "x": 3,
-      "y": 8,
-      "type": "aile"
-    },
-    {
-      "id": 3679,
-      "name": "24",
-      "x": 4,
-      "y": 8,
-      "type": "seat"
-    },
-    {
-      "id": 3680,
-      "name": "25",
-      "x": 5,
-      "y": 8,
-      "type": "seat"
-    },
-    {
-      "id": 3681,
-      "name": "26",
-      "x": 1,
-      "y": 9,
-      "type": "seat"
-    },
-    {
-      "id": 3682,
-      "name": "27",
-      "x": 2,
-      "y": 9,
-      "type": "seat"
-    },
-    {
-      "id": 3683,
-      "name": "",
-      "x": 3,
-      "y": 9,
-      "type": "aile"
-    },
-    {
-      "id": 3684,
-      "name": "28",
-      "x": 4,
-      "y": 9,
-      "type": "seat"
-    },
-    {
-      "id": 3685,
-      "name": "29",
-      "x": 5,
-      "y": 9,
-      "type": "seat"
-    },
-    {
-      "id": 3686,
-      "name": "30",
-      "x": 1,
-      "y": 10,
-      "type": "seat"
-    },
-    {
-      "id": 3687,
-      "name": "31",
-      "x": 2,
-      "y": 10,
-      "type": "seat"
-    },
-    {
-      "id": 3688,
-      "name": "",
-      "x": 3,
-      "y": 10,
-      "type": "aile"
-    },
-    {
-      "id": 3689,
-      "name": "32",
-      "x": 4,
-      "y": 10,
-      "type": "seat"
-    },
-    {
-      "id": 3690,
-      "name": "33",
-      "x": 5,
-      "y": 10,
-      "type": "seat"
-    },
-    {
-      "id": 3691,
-      "name": "34",
-      "x": 1,
-      "y": 11,
-      "type": "seat"
-    },
-    {
-      "id": 3692,
-      "name": "35",
-      "x": 2,
-      "y": 11,
-      "type": "seat"
-    },
-    {
-      "id": 3693,
-      "name": "",
-      "x": 3,
-      "y": 11,
-      "type": "aile"
-    },
-    {
-      "id": 3694,
-      "name": "36",
-      "x": 4,
-      "y": 11,
-      "type": "seat"
-    },
-    {
-      "id": 3695,
-      "name": "37",
-      "x": 5,
-      "y": 11,
-      "type": "seat"
-    },
-    {
-      "id": 3696,
-      "name": "38",
-      "x": 1,
-      "y": 12,
-      "type": "seat"
-    },
-    {
-      "id": 3697,
-      "name": "39",
-      "x": 2,
-      "y": 12,
-      "type": "seat"
-    },
-    {
-      "id": 3698,
-      "name": "",
-      "x": 3,
-      "y": 12,
-      "type": "aile"
-    },
-    {
-      "id": 3699,
-      "name": "40",
-      "x": 4,
-      "y": 12,
-      "type": "seat"
-    },
-    {
-      "id": 3700,
-      "name": "41",
-      "x": 5,
-      "y": 12,
-      "type": "seat"
-    },
-    {
-      "id": 3701,
-      "name": "42",
-      "x": 1,
-      "y": 13,
-      "type": "seat"
-    },
-    {
-      "id": 3702,
-      "name": "43",
-      "x": 2,
-      "y": 13,
-      "type": "seat"
-    },
-    {
-      "id": 3703,
-      "name": "44",
-      "x": 3,
-      "y": 13,
-      "type": "seat"
-    },
-    {
-      "id": 3704,
-      "name": "45",
-      "x": 4,
-      "y": 13,
-      "type": "seat"
-    },
-    {
-      "id": 3705,
-      "name": "46",
-      "x": 5,
-      "y": 13,
-      "type": "seat"
-    },
-    {
-      "id": 3706,
-      "name": "47",
-      "x": 1,
-      "y": 14,
-      "type": "seat"
-    },
-    {
-      "id": 3707,
-      "name": "48",
-      "x": 2,
-      "y": 14,
-      "type": "seat"
-    },
-    {
-      "id": 3708,
-      "name": "49",
-      "x": 3,
-      "y": 14,
-      "type": "seat"
-    },
-    {
-      "id": 3709,
-      "name": "50",
-      "x": 4,
-      "y": 14,
-      "type": "seat"
-    },
-    {
-      "id": 3710,
-      "name": "51",
-      "x": 5,
-      "y": 14,
-      "type": "seat"
-    }
-  ]
-}
- </pre>
+          "id": 296,
+          "maxX": 5,
+          "maxY": 14,
+          "seats": [
+            {
+              "id": 3641,
+              "name": "",
+              "x": 1,
+              "y": 1,
+              "type": "driver seat"
+            },
+            {
+              "id": 3642,
+              "name": "",
+              "x": 2,
+              "y": 1,
+              "type": "aile"
+            },
+            {
+              "id": 3643,
+              "name": "",
+              "x": 3,
+              "y": 1,
+              "type": "aile"
+            },
+            {
+              "id": 3644,
+              "name": "",
+              "x": 4,
+              "y": 1,
+              "type": "aile"
+            },
+            {
+              "id": 3645,
+              "name": "1",
+              "x": 5,
+              "y": 1,
+              "type": "seat"
+            },
+            {
+              "id": 3646,
+              "name": "",
+              "x": 1,
+              "y": 2,
+              "type": "aile"
+            },
+            {
+              "id": 3647,
+              "name": "",
+              "x": 2,
+              "y": 2,
+              "type": "aile"
+            },
+            {
+              "id": 3648,
+              "name": "",
+              "x": 3,
+              "y": 2,
+              "type": "aile"
+            },
+            {
+              "id": 3649,
+              "name": "2",
+              "x": 4,
+              "y": 2,
+              "type": "seat"
+            },
+            {
+              "id": 3650,
+              "name": "3",
+              "x": 5,
+              "y": 2,
+              "type": "seat"
+            },
+            {
+              "id": 3651,
+              "name": "4",
+              "x": 1,
+              "y": 3,
+              "type": "seat"
+            },
+            {
+              "id": 3652,
+              "name": "5",
+              "x": 2,
+              "y": 3,
+              "type": "seat"
+            },
+            {
+              "id": 3653,
+              "name": "",
+              "x": 3,
+              "y": 3,
+              "type": "aile"
+            },
+            {
+              "id": 3654,
+              "name": "6",
+              "x": 4,
+              "y": 3,
+              "type": "seat"
+            },
+            {
+              "id": 3655,
+              "name": "7",
+              "x": 5,
+              "y": 3,
+              "type": "seat"
+            },
+            {
+              "id": 3656,
+              "name": "8",
+              "x": 1,
+              "y": 4,
+              "type": "seat"
+            },
+            {
+              "id": 3657,
+              "name": "9",
+              "x": 2,
+              "y": 4,
+              "type": "seat"
+            },
+            {
+              "id": 3658,
+              "name": "",
+              "x": 3,
+              "y": 4,
+              "type": "aile"
+            },
+            {
+              "id": 3659,
+              "name": "10",
+              "x": 4,
+              "y": 4,
+              "type": "seat"
+            },
+            {
+              "id": 3660,
+              "name": "11",
+              "x": 5,
+              "y": 4,
+              "type": "seat"
+            },
+            {
+              "id": 3661,
+              "name": "12",
+              "x": 1,
+              "y": 5,
+              "type": "seat"
+            },
+            {
+              "id": 3662,
+              "name": "13",
+              "x": 2,
+              "y": 5,
+              "type": "seat"
+            },
+            {
+              "id": 3663,
+              "name": "",
+              "x": 3,
+              "y": 5,
+              "type": "aile"
+            },
+            {
+              "id": 3664,
+              "name": "14",
+              "x": 4,
+              "y": 5,
+              "type": "seat"
+            },
+            {
+              "id": 3665,
+              "name": "15",
+              "x": 5,
+              "y": 5,
+              "type": "seat"
+            },
+            {
+              "id": 3666,
+              "name": "16",
+              "x": 1,
+              "y": 6,
+              "type": "seat"
+            },
+            {
+              "id": 3667,
+              "name": "17",
+              "x": 2,
+              "y": 6,
+              "type": "seat"
+            },
+            {
+              "id": 3668,
+              "name": "",
+              "x": 3,
+              "y": 6,
+              "type": "aile"
+            },
+            {
+              "id": 3669,
+              "name": "",
+              "x": 4,
+              "y": 6,
+              "type": "aile"
+            },
+            {
+              "id": 3670,
+              "name": "",
+              "x": 5,
+              "y": 6,
+              "type": "aile"
+            },
+            {
+              "id": 3671,
+              "name": "18",
+              "x": 1,
+              "y": 7,
+              "type": "seat"
+            },
+            {
+              "id": 3672,
+              "name": "19",
+              "x": 2,
+              "y": 7,
+              "type": "seat"
+            },
+            {
+              "id": 3673,
+              "name": "",
+              "x": 3,
+              "y": 7,
+              "type": "aile"
+            },
+            {
+              "id": 3674,
+              "name": "20",
+              "x": 4,
+              "y": 7,
+              "type": "seat"
+            },
+            {
+              "id": 3675,
+              "name": "21",
+              "x": 5,
+              "y": 7,
+              "type": "seat"
+            },
+            {
+              "id": 3676,
+              "name": "22",
+              "x": 1,
+              "y": 8,
+              "type": "seat"
+            },
+            {
+              "id": 3677,
+              "name": "23",
+              "x": 2,
+              "y": 8,
+              "type": "seat"
+            },
+            {
+              "id": 3678,
+              "name": "",
+              "x": 3,
+              "y": 8,
+              "type": "aile"
+            },
+            {
+              "id": 3679,
+              "name": "24",
+              "x": 4,
+              "y": 8,
+              "type": "seat"
+            },
+            {
+              "id": 3680,
+              "name": "25",
+              "x": 5,
+              "y": 8,
+              "type": "seat"
+            },
+            {
+              "id": 3681,
+              "name": "26",
+              "x": 1,
+              "y": 9,
+              "type": "seat"
+            },
+            {
+              "id": 3682,
+              "name": "27",
+              "x": 2,
+              "y": 9,
+              "type": "seat"
+            },
+            {
+              "id": 3683,
+              "name": "",
+              "x": 3,
+              "y": 9,
+              "type": "aile"
+            },
+            {
+              "id": 3684,
+              "name": "28",
+              "x": 4,
+              "y": 9,
+              "type": "seat"
+            },
+            {
+              "id": 3685,
+              "name": "29",
+              "x": 5,
+              "y": 9,
+              "type": "seat"
+            },
+            {
+              "id": 3686,
+              "name": "30",
+              "x": 1,
+              "y": 10,
+              "type": "seat"
+            },
+            {
+              "id": 3687,
+              "name": "31",
+              "x": 2,
+              "y": 10,
+              "type": "seat"
+            },
+            {
+              "id": 3688,
+              "name": "",
+              "x": 3,
+              "y": 10,
+              "type": "aile"
+            },
+            {
+              "id": 3689,
+              "name": "32",
+              "x": 4,
+              "y": 10,
+              "type": "seat"
+            },
+            {
+              "id": 3690,
+              "name": "33",
+              "x": 5,
+              "y": 10,
+              "type": "seat"
+            },
+            {
+              "id": 3691,
+              "name": "34",
+              "x": 1,
+              "y": 11,
+              "type": "seat"
+            },
+            {
+              "id": 3692,
+              "name": "35",
+              "x": 2,
+              "y": 11,
+              "type": "seat"
+            },
+            {
+              "id": 3693,
+              "name": "",
+              "x": 3,
+              "y": 11,
+              "type": "aile"
+            },
+            {
+              "id": 3694,
+              "name": "36",
+              "x": 4,
+              "y": 11,
+              "type": "seat"
+            },
+            {
+              "id": 3695,
+              "name": "37",
+              "x": 5,
+              "y": 11,
+              "type": "seat"
+            },
+            {
+              "id": 3696,
+              "name": "38",
+              "x": 1,
+              "y": 12,
+              "type": "seat"
+            },
+            {
+              "id": 3697,
+              "name": "39",
+              "x": 2,
+              "y": 12,
+              "type": "seat"
+            },
+            {
+              "id": 3698,
+              "name": "",
+              "x": 3,
+              "y": 12,
+              "type": "aile"
+            },
+            {
+              "id": 3699,
+              "name": "40",
+              "x": 4,
+              "y": 12,
+              "type": "seat"
+            },
+            {
+              "id": 3700,
+              "name": "41",
+              "x": 5,
+              "y": 12,
+              "type": "seat"
+            },
+            {
+              "id": 3701,
+              "name": "42",
+              "x": 1,
+              "y": 13,
+              "type": "seat"
+            },
+            {
+              "id": 3702,
+              "name": "43",
+              "x": 2,
+              "y": 13,
+              "type": "seat"
+            },
+            {
+              "id": 3703,
+              "name": "44",
+              "x": 3,
+              "y": 13,
+              "type": "seat"
+            },
+            {
+              "id": 3704,
+              "name": "45",
+              "x": 4,
+              "y": 13,
+              "type": "seat"
+            },
+            {
+              "id": 3705,
+              "name": "46",
+              "x": 5,
+              "y": 13,
+              "type": "seat"
+            },
+            {
+              "id": 3706,
+              "name": "47",
+              "x": 1,
+              "y": 14,
+              "type": "seat"
+            },
+            {
+              "id": 3707,
+              "name": "48",
+              "x": 2,
+              "y": 14,
+              "type": "seat"
+            },
+            {
+              "id": 3708,
+              "name": "49",
+              "x": 3,
+              "y": 14,
+              "type": "seat"
+            },
+            {
+              "id": 3709,
+              "name": "50",
+              "x": 4,
+              "y": 14,
+              "type": "seat"
+            },
+            {
+              "id": 3710,
+              "name": "51",
+              "x": 5,
+              "y": 14,
+              "type": "seat"
+            }
+          ]
+        }
+         </pre>
 
             </div>
             <!-- Endpoint -->
             <div class="section">
-
+                
                 <h2>
                     <span class="method get">GET</span>
                     /api/vehicles/getseatstatus
@@ -903,7 +904,6 @@
                 <pre>
         GET http://196.189.126.8:8010/api/vehicles/getseatstatus?routeScheduleId=2
     </pre>
-
                 <h3>Response</h3>
                 <pre>
        true
@@ -1440,6 +1440,185 @@
   "2026-08-06"
 ]
      </pre>
+
+            </div>
+
+            <!-- Error Codes -->
+            <div class="section">
+
+                <h2>Forign key description</h2>
+                <h3>Capital city</h3>
+<pre>
+[
+    { "id": 14, "name": "Addis Ababa", "type": "Capital city" },
+    { "id": 201, "name": "Assosa", "type": "Capital city" }
+]
+</pre>
+                <h3>Major city</h3>
+<pre>
+    [
+
+      { "id": 253, "name": "Harar", "type": "major city" },
+      { "id": 338, "name": "Adama", "type": "major city" },
+      { "id": 359, "name": "Arjo", "type": "major city" },
+      { "id": 431, "name": "Sigmo", "type": "major city" },
+      { "id": 457, "name": "Wuchale", "type": "major city" },
+      { "id": 518, "name": "Ayra", "type": "major city" },
+      { "id": 520, "name": "Begi", "type": "major city" },
+      { "id": 538, "name": "Jimma", "type": "major city" },
+      { "id": 549, "name": "Arba Minch", "type": "major city" },
+      { "id": 572, "name": "Yirgachefe", "type": "major city" },
+      { "id": 628, "name": "Areka", "type": "major city" },
+      { "id": 629, "name": "Boditi", "type": "major city" },
+      { "id": 667, "name": "Masha", "type": "major city" },
+      { "id": 703, "name": "Hawassa", "type": "major city" },
+      { "id": 709, "name": "Axum", "type": "major city" },
+      { "id": 720, "name": "Adigrat", "type": "major city" },
+      { "id": 733, "name": "Mekele", "type": "major city" },
+      { "id": 735, "name": "Shire", "type": "major city" },
+      { "id": 749, "name": "Humera", "type": "major city" },
+      { "id": 774, "name": "Jigjiga", "type": "major city" },
+      { "id": 835, "name": "Gode", "type": "major city" },
+      { "id": 854, "name": "Woldiya", "type": "major city" },
+      { "id": 856, "name": "Gashna Kon", "type": "major city" },
+      { "id": 857, "name": "Geregera", "type": "major city" },
+      { "id": 858, "name": "Akesta", "type": "major city" },
+      { "id": 859, "name": "Mehal Meda", "type": "major city" },
+      { "id": 860, "name": "Molalie", "type": "major city" },
+      { "id": 861, "name": "Zemero", "type": "major city" },
+      { "id": 862, "name": "Degaga", "type": "major city" },
+      { "id": 863, "name": "Rama", "type": "major city" },
+      { "id": 869, "name": "Gida Ayana", "type": "major city" },
+      { "id": 870, "name": "Qaqie", "type": "major city" },
+      { "id": 872, "name": "Bako", "type": "major city" },
+      { "id": 874, "name": "Saja", "type": "major city" },
+      { "id": 875, "name": "Dieta Zada", "type": "major city" },
+      { "id": 878, "name": "Birbir/Mirab Abaya", "type": "major city" },
+      { "id": 884, "name": "Godie", "type": "major city" },
+      { "id": 886, "name": "Mechara", "type": "major city" },
+      { "id": 887, "name": "Kobo Deder", "type": "major city" },
+      { "id": 889, "name": "Feres Bet", "type": "major city" },
+      { "id": 890, "name": "Jigga Quarit", "type": "major city" },
+      { "id": 891, "name": "Woreta", "type": "major city" },
+      { "id": 892, "name": "GorGorra", "type": "major city" },
+      { "id": 893, "name": "Bekune/Shawra Delengo", "type": "major city" },
+      { "id": 894, "name": "Dansha", "type": "major city" },
+      { "id": 897, "name": "Lumamie", "type": "major city" },
+      { "id": 899, "name": "Yejubie", "type": "major city" },
+      { "id": 902, "name": "Jarra Gedo", "type": "major city" },
+      { "id": 904, "name": "Chagni", "type": "major city" },
+      { "id": 906, "name": "Adiet", "type": "major city" },
+      { "id": 909, "name": "Merto Lemariyam", "type": "major city" },
+      { "id": 978, "name": "Sekota", "type": "major city" },
+      { "id": 985, "name": "Shiraro", "type": "major city" },
+      { "id": 1000, "name": "Ginde Weyin", "type": "major city" },
+      { "id": 1002, "name": "Amanuel", "type": "major city" },
+      { "id": 1007, "name": "Gimjabet Azena", "type": "major city" },
+      { "id": 1019, "name": "Dejen", "type": "major city" },
+      { "id": 1021, "name": "Gilgel Beles", "type": "major city" },
+      { "id": 1024, "name": "Ebnat", "type": "major city" },
+      { "id": 1027, "name": "Sekela", "type": "major city" },
+      { "id": 1030, "name": "Dego Tsion", "type": "major city" },
+      { "id": 1045, "name": "Gedeb", "type": "major city" },
+      { "id": 1052, "name": "Lera", "type": "major city" },
+      { "id": 1078, "name": "Guder", "type": "major city" },
+      { "id": 1083, "name": "Hareto", "type": "major city" },
+      { "id": 1085, "name": "Arjo Gudetu", "type": "major city" },
+      { "id": 1088, "name": "Dire Dawa", "type": "major city" },
+      { "id": 1092, "name": "Meragna", "type": "major city" },
+      { "id": 1095, "name": "Wereta", "type": "major city" },
+      { "id": 1100, "name": "Muketuri", "type": "major city" },
+      { "id": 1102, "name": "Asebe Teferi", "type": "major city" },
+      { "id": 1106, "name": "Semera", "type": "major city" },
+      { "id": 1107, "name": "Tarma Ber", "type": "major city" },
+      { "id": 1112, "name": "Wegdi", "type": "major city" },
+      { "id": 1120, "name": "Gambella", "type": "major city" },
+      { "id": 34, "name": "Millie", "type": "major city" },
+      { "id": 41, "name": "Erbeti", "type": "major city" },
+      { "id": 46, "name": "Bure Mudaytu", "type": "major city" },
+      { "id": 47, "name": "Dulecha", "type": "major city" },
+      { "id": 74, "name": "Debre Markos", "type": "major city" },
+      { "id": 84, "name": "Shebel Berenta", "type": "major city" },
+      { "id": 94, "name": "Gondar", "type": "major city" },
+      { "id": 98, "name": "Metemma", "type": "major city" },
+      { "id": 114, "name": "Debre Birhan", "type": "major city" },
+      { "id": 125, "name": "Merhabete", "type": "major city" },
+      { "id": 133, "name": "Delanta", "type": "major city" },
+      { "id": 141, "name": "Weldiya", "type": "major city" },
+      { "id": 154, "name": "Gayint", "type": "major city" },
+      { "id": 156, "name": "Este", "type": "major city" },
+      { "id": 158, "name": "Simada", "type": "major city" },
+      { "id": 163, "name": "Dessie", "type": "major city" },
+      { "id": 173, "name": "Mehal Sayint", "type": "major city" },
+      { "id": 174, "name": "Sayint Ajbar", "type": "major city" },
+      { "id": 178, "name": "Were Babu", "type": "major city" },
+      { "id": 179, "name": "Were Ilu", "type": "major city" },
+      { "id": 195, "name": "Jawi", "type": "major city" },
+      { "id": 199, "name": "Bahir Dar", "type": "major city" },
+    ]
+    </pre>
+                <h3>Sub city</h3>
+<pre>
+[
+
+    { "id": 15, "name": "Addis Ketema", "type": "Subcity" },
+    { "id": 16, "name": "Akaky Kaliti", "type": "Subcity" },
+    { "id": 17, "name": "Arada", "type": "Subcity" },
+    { "id": 18, "name": "Bole", "type": "Subcity" },
+    { "id": 19, "name": "Gullele", "type": "Subcity" },
+    { "id": 20, "name": "Kirkos", "type": "Subcity" },
+    { "id": 21, "name": "Kolfe Keranio", "type": "Subcity" },
+    { "id": 22, "name": "Lideta", "type": "Subcity" },
+    { "id": 23, "name": "Nifas Silk-Lafto", "type": "Subcity" },
+    { "id": 24, "name": "Yeka", "type": "Subcity" },
+    { "id": 25, "name": "Lemi Kura", "type": "Subcity" }
+]
+</pre>
+                <h3>Region</h3>
+<pre>
+  [
+      { "id": 1, "name": "Addis Ababa", "type": "Region" },
+      { "id": 2, "name": "Afar", "type": "Region" },
+      { "id": 3, "name": "Somali", "type": "Region" },
+      { "id": 4, "name": "Amhara", "type": "Region" },
+      { "id": 5, "name": "Benishangul-gumiz", "type": "Region" },
+      { "id": 6, "name": "Dire Dawa", "type": "Region" },
+      { "id": 7, "name": "Gambella", "type": "Region" },
+      { "id": 8, "name": "Harrari", "type": "Region" },
+      { "id": 9, "name": "Oromia", "type": "Region" },
+      { "id": 10, "name": "S.N.N.P.R", "type": "Region" },
+      { "id": 11, "name": "S.W.E.P.R", "type": "Region" },
+      { "id": 12, "name": "Sidama", "type": "Region" },
+      { "id": 13, "name": "Tigray", "type": "Region" },
+
+ ]
+ </pre>
+                <h3>Marital Status</h3>
+<pre>
+   [
+        {
+            "id": 183,
+            "name": "Single"
+        },
+        {
+            "id": 184,
+            "name": "Married"
+        }
+   ]
+ </pre>
+                <h3>Gender</h3>
+<pre>
+   [
+        {
+            "id": 181,
+            "name": "Male"
+        },
+        {
+            "id": 182,
+            "name": "Female"
+        }
+   ]
+ </pre>
 
             </div>
 
